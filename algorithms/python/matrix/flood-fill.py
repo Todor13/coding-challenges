@@ -5,7 +5,7 @@ from typing import List
 
 class Solution:
     def fill(self, image: List[List[int]], sr: int, sc: int, newColor: int, currColor: int):
-        if sr >= 0 and sr < len(image) and sc >= 0 and sc < len(image[0]) and image[sr][sc] == currColor:
+        if 0 <= sr < len(image) and 0 <= sc < len(image[0]) and image[sr][sc] == currColor:
             image[sr][sc] = newColor
 
             self.fill(image, sr + 1, sc, newColor, currColor)
